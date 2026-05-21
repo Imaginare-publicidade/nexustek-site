@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexustek Eletrônica | Soluções em Montagem de Placas PCB</title>
+    <meta name="description" content="Excelência técnica e prazos otimizados em montagem de placas eletrônicas. Soluções inovadoras para o sucesso do seu projeto.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#00B4D8',
+                            DEFAULT: '#0050A0', 
+                            dark: '#002B5E',
+                            glow: '#00E5FF'
+                        },
+                        dark: {
+                            bg: '#070B14',
+                            surface: '#0D1322',
+                            card: '#131C31',
+                            border: '#1E293B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: 1, boxShadow: '0 0 15px rgba(0, 229, 255, 0.4)' },
+                            '50%': { opacity: .7, boxShadow: '0 0 30px rgba(0, 229, 255, 0.7)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="bg-dark-bg text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-brand-light selection:text-white">
+
+    <!-- Navbar -->
+    <header class="fixed w-full top-0 z-50 bg-dark-bg/80 backdrop-blur-md border-b border-dark-border transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="./assets/images/logo.jpg" alt="Nexustek Eletrônica" class="h-20 w-auto rounded-md shadow-[0_0_15px_rgba(0,229,255,0.15)] bg-white">
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Home</a>
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Quem Somos</a>
+                    <a href="#services" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Serviços</a>
+                    <a href="#differentials" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Diferenciais</a>
+                    
+                    <a href="https://wa.me/5511982698184" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-DEFAULT hover:bg-brand-light text-white text-sm font-medium transition-all shadow-[0_0_20px_rgba(0,80,160,0.4)] hover:shadow-[0_0_25px_rgba(0,180,216,0.6)]">
+                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                        Fale Conosco
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden hidden bg-dark-surface border-b border-dark-border absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-card">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-card">Quem Somos</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-card">Serviços</a>
+                <a href="#differentials" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-card">Diferenciais</a>
+                <a href="https://wa.me/5511982698184" target="_blank" class="block px-3 py-2 mt-4 text-center rounded-lg bg-brand-DEFAULT text-white font-medium">Fale Conosco</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="./assets/images/hero_bg.png" alt="Tecnologia de Placas" class="w-full h-full object-cover opacity-30 mix-blend-screen">
+                <div class="absolute inset-0 bg-gradient-to-b from-dark-bg/80 via-dark-bg/60 to-dark-bg"></div>
+            </div>
+            
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-DEFAULT/10 border border-brand-DEFAULT/30 text-brand-glow text-xs font-semibold uppercase tracking-widest mb-6">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-glow opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-glow"></span>
+                    </span>
+                    Tecnologia de Ponta
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight max-w-4xl mb-6 leading-tight">
+                    Soluções Inovadoras e Agilidade em <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-glow to-brand-light">Montagem de Placas Eletrônicas</span>
+                </h1>
+                
+                <p class="mt-4 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-light">
+                    Excelência técnica, prazos otimizados e qualidade validada para o sucesso absoluto do seu projeto.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/5511982698184" target="_blank" class="animate-pulse-glow px-8 py-4 rounded-lg bg-brand-DEFAULT hover:bg-brand-light text-white font-semibold text-lg transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="calculator" class="w-5 h-5"></i>
+                        Solicitar Orçamento
+                    </a>
+                    <a href="#services" class="px-8 py-4 rounded-lg bg-transparent border border-dark-border hover:border-brand-glow/50 text-slate-300 hover:text-white font-semibold text-lg transition-all flex items-center justify-center gap-2 group">
+                        Nossos Serviços
+                        <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-dark-surface relative border-y border-dark-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                    <div class="mb-12 lg:mb-0 relative">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-brand-DEFAULT/20 to-brand-glow/20 blur-xl rounded-full opacity-50"></div>
+                        <div class="relative bg-dark-card border border-dark-border rounded-2xl p-8 shadow-2xl">
+                            <i data-lucide="users" class="w-12 h-12 text-brand-glow mb-6"></i>
+                            <h2 class="text-3xl font-bold text-white mb-6">Quem Somos</h2>
+                            <p class="text-slate-300 leading-relaxed text-lg mb-6">
+                                A <strong class="text-white font-semibold">Nexustek</strong> une anos de experiência em eletrônica com foco em produção escalável e controlada, proporcionando suporte técnico e operacional ao seu projeto.
+                            </p>
+                            <p class="text-slate-400 leading-relaxed">
+                                Com certificação ISO 9001:2015 e processos rigorosos de qualidade, atuamos desde a prototipagem até a produção recorrente. Nossa missão é transformar a montagem de placas e sistemas eletrônicos em um processo previsível e confiável, alinhado às metas de prazo e custo dos clientes.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-dark-bg p-6 rounded-xl border border-dark-border flex flex-col items-center text-center group hover:border-brand-DEFAULT transition-colors">
+                            <div class="w-12 h-12 rounded-full bg-brand-DEFAULT/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <i data-lucide="award" class="text-brand-glow w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-white font-bold text-xl mb-2">+10 Anos</h3>
+                            <p class="text-sm text-slate-400">De experiência no mercado</p>
+                        </div>
+                        <div class="bg-dark-bg p-6 rounded-xl border border-dark-border flex flex-col items-center text-center group hover:border-brand-DEFAULT transition-colors mt-8">
+                            <div class="w-12 h-12 rounded-full bg-brand-DEFAULT/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <i data-lucide="zap" class="text-brand-glow w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-white font-bold text-xl mb-2">Agilidade</h3>
+                            <p class="text-sm text-slate-400">Prazos otimizados</p>
+                        </div>
+                        <div class="bg-dark-bg p-6 rounded-xl border border-dark-border flex flex-col items-center text-center group hover:border-brand-DEFAULT transition-colors -mt-8">
+                            <div class="w-12 h-12 rounded-full bg-brand-DEFAULT/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <i data-lucide="shield-check" class="text-brand-glow w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-white font-bold text-xl mb-2">Qualidade</h3>
+                            <p class="text-sm text-slate-400">Processos validados</p>
+                        </div>
+                        <div class="bg-dark-bg p-6 rounded-xl border border-dark-border flex flex-col items-center text-center group hover:border-brand-DEFAULT transition-colors">
+                            <div class="w-12 h-12 rounded-full bg-brand-DEFAULT/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <i data-lucide="microchip" class="text-brand-glow w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-white font-bold text-xl mb-2">Inovação</h3>
+                            <p class="text-sm text-slate-400">Soluções estratégicas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 bg-dark-bg relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-brand-glow font-semibold tracking-wide uppercase text-sm mb-2">Expertise Técnica</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Nossos Serviços</h3>
+                    <p class="text-slate-400 text-lg">Montagem SMD, THT e mista, full box build e testes funcionais para projetos com escala e qualidade industrial.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="group bg-dark-card rounded-2xl overflow-hidden border border-dark-border hover:border-brand-light/50 transition-all hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(0,180,216,0.1)]">
+                        <div class="h-48 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-brand-DEFAULT/20 group-hover:bg-transparent transition-colors z-10"></div>
+                            <img src="./assets/images/service_pcb.png" alt="Montagem SMD, THT e Mista" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 relative">
+                            <div class="absolute -top-6 right-8 w-12 h-12 bg-dark-bg border border-dark-border rounded-xl flex items-center justify-center z-20 shadow-lg">
+                                <i data-lucide="cpu" class="text-brand-glow w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-white mb-3 mt-2">Montagem SMD, THT e Mista</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Montagem técnica com controle de processo para entregar placas eletrônicas com precisão, previsibilidade e grande capacidade de escala.
+                            </p>
+                            <a href="https://wa.me/5511982698184?text=Olá, gostaria de saber mais sobre Montagem%20SMD%2C%20THT%20e%20Mista" target="_blank" class="text-brand-light font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                                Solicitar cotação <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="group bg-dark-card rounded-2xl overflow-hidden border border-dark-border hover:border-brand-light/50 transition-all hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(0,180,216,0.1)]">
+                        <div class="h-48 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-brand-DEFAULT/20 group-hover:bg-transparent transition-colors z-10"></div>
+                            <img src="./assets/images/service_prototype.png" alt="Full Box Build e Turn-Key" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 relative">
+                            <div class="absolute -top-6 right-8 w-12 h-12 bg-dark-bg border border-dark-border rounded-xl flex items-center justify-center z-20 shadow-lg">
+                                <i data-lucide="layers" class="text-brand-glow w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-white mb-3 mt-2">Full Box Build / Turn-Key</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Entrega de sistema completo, desde componentes eletrônicos até integração mecânica, montagem de gabinetes, chicotes e embalagem final.
+                            </p>
+                            <a href="https://wa.me/5511982698184?text=Olá, gostaria de saber mais sobre Full%20Box%20Build%20e%20Turn-Key" target="_blank" class="text-brand-light font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                                Solicitar cotação <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="group bg-dark-card rounded-2xl overflow-hidden border border-dark-border hover:border-brand-light/50 transition-all hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(0,180,216,0.1)]">
+                        <div class="h-48 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-brand-DEFAULT/20 group-hover:bg-transparent transition-colors z-10"></div>
+                            <img src="./assets/images/service_quality.png" alt="Testes e Inspeção" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 relative">
+                            <div class="absolute -top-6 right-8 w-12 h-12 bg-dark-bg border border-dark-border rounded-xl flex items-center justify-center z-20 shadow-lg">
+                                <i data-lucide="scan" class="text-brand-glow w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-white mb-3 mt-2">Testes e Inspeção</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Processos rigorosos de verificação funcional e inspeção para eliminar falhas invisíveis e assegurar durabilidade do produto.
+                            </p>
+                            <a href="https://wa.me/5511982698184?text=Olá, gostaria de saber mais sobre Testes%20e%20Inspeção" target="_blank" class="text-brand-light font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                                Solicitar cotação <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Operations Section -->
+        <section id="operations" class="py-24 bg-dark-surface border-y border-dark-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-brand-glow font-semibold tracking-wide uppercase text-sm mb-2">Escala com previsibilidade</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">A Nexustek estrutura sua produção</h3>
+                    <p class="text-slate-400 text-lg">Transformamos a montagem de placas em uma operação confiável, com controle de qualidade, previsão de prazo e suporte técnico contínuo.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <div class="bg-dark-card border border-dark-border rounded-2xl p-8">
+                            <h4 class="text-xl font-bold text-white mb-4">Desafios que removemos</h4>
+                            <ul class="space-y-3 text-slate-400 text-sm list-disc list-inside">
+                                <li>Atrasos por falta de componentes</li>
+                                <li>Retrabalho devido a falhas invisíveis</li>
+                                <li>Fornecedores que não escalam com sua demanda</li>
+                                <li>Perda de controle sobre qualidade</li>
+                                <li>Dificuldade em escalar do protótipo para produção</li>
+                                <li>Custos de produção imprevisíveis</li>
+                            </ul>
+                        </div>
+                        <div class="bg-dark-card border border-dark-border rounded-2xl p-8">
+                            <h4 class="text-xl font-bold text-white mb-4">Do componente ao produto final</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Você foca no mercado. Nós estruturamos e garantimos a produção completa, incluindo integração eletrônica e mecânica, testes funcionais e embalagem final.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-dark-card border border-dark-border rounded-2xl p-8">
+                            <h4 class="text-xl font-bold text-white mb-4">Modelos de contratação</h4>
+                            <ul class="space-y-3 text-slate-400 text-sm list-disc list-inside">
+                                <li>Turn-key total</li>
+                                <li>Turn-key parcial</li>
+                                <li>Industrialização total de componentes</li>
+                                <li>Produção recorrente ou sob demanda</li>
+                            </ul>
+                        </div>
+                        <div class="bg-dark-card border border-dark-border rounded-2xl p-8">
+                            <h4 class="text-xl font-bold text-white mb-4">Setores atendidos</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Atendemos demandas em mobilidade urbana, medicina, automotivo, agronegócio, automação comercial e industrial, energia, IoT e conectividade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Differentials Section -->
+        <section id="differentials" class="py-24 bg-dark-surface border-y border-dark-border relative overflow-hidden">
+            <!-- decorative bg -->
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-DEFAULT/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="lg:flex lg:items-center lg:justify-between">
+                    <div class="lg:w-1/2 mb-12 lg:mb-0 pr-8">
+                        <h2 class="text-brand-glow font-semibold tracking-wide uppercase text-sm mb-2">Por que escolher a Nexustek?</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Nossos Diferenciais</h3>
+                        <p class="text-slate-400 text-lg mb-8">
+                            Não somos apenas fornecedores, somos parceiros estratégicos do seu negócio. Nossa infraestrutura e metodologia garantem os melhores resultados.
+                        </p>
+                        <a href="https://wa.me/5511982698184" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-dark-bg font-bold hover:bg-brand-light hover:text-white transition-colors">
+                            Iniciar Parceria
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <div class="space-y-4">
+                            <!-- Diff 1 -->
+                            <div class="flex items-start gap-4 p-6 bg-dark-bg border border-dark-border rounded-xl hover:border-brand-DEFAULT/50 transition-colors">
+                                <div class="w-10 h-10 rounded-full bg-brand-DEFAULT/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="crosshair" class="text-brand-glow w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-1">Alta Precisão</h4>
+                                    <p class="text-slate-400 text-sm">Padrão rigoroso de qualidade em cada componente. Tolerância zero para falhas na linha de montagem.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Diff 2 -->
+                            <div class="flex items-start gap-4 p-6 bg-dark-bg border border-dark-border rounded-xl hover:border-brand-DEFAULT/50 transition-colors">
+                                <div class="w-10 h-10 rounded-full bg-brand-DEFAULT/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="layers" class="text-brand-glow w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-1">Tecnologia de Ponta</h4>
+                                    <p class="text-slate-400 text-sm">Equipamentos modernos e constantemente atualizados para atender aos projetos mais complexos.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Diff 3 -->
+                            <div class="flex items-start gap-4 p-6 bg-dark-bg border border-dark-border rounded-xl hover:border-brand-DEFAULT/50 transition-colors">
+                                <div class="w-10 h-10 rounded-full bg-brand-DEFAULT/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="clock" class="text-brand-glow w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-1">Pontualidade</h4>
+                                    <p class="text-slate-400 text-sm">Cumprimento rigoroso dos prazos acordados. Seu projeto pronto no momento que você precisa.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg pt-16 pb-8 border-t border-dark-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <!-- Brand Info -->
+                <div class="col-span-1">
+                    <div class="flex items-center mb-4">
+                        <img src="./assets/images/logo.jpg" alt="Nexustek Eletrônica" class="h-20 w-auto rounded-md bg-white">
+                    </div>
+                    <p class="text-slate-400 text-sm mb-4">
+                        Soluções inovadoras, ágeis e confiáveis em montagem de placas PCB e eletrônica de precisão.
+                    </p>
+                    <div class="text-slate-500 text-xs font-mono">
+                        CNPJ: 65.638.867/0001-12
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="col-span-1">
+                    <h4 class="text-white font-bold mb-4">Navegação</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#home" class="hover:text-brand-glow transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-glow transition-colors">Quem Somos</a></li>
+                        <li><a href="#services" class="hover:text-brand-glow transition-colors">Serviços</a></li>
+                        <li><a href="#differentials" class="hover:text-brand-glow transition-colors">Diferenciais</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-span-1">
+                    <h4 class="text-white font-bold mb-4">Contato</h4>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-glow flex-shrink-0"></i>
+                            <span>Av. Conceição, 807, Bairro Centro<br>Diadema - SP</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-glow flex-shrink-0"></i>
+                            <a href="https://wa.me/5511982698184" class="hover:text-white transition-colors">(11) 98269-8184</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-glow flex-shrink-0"></i>
+                            <a href="mailto:Contato@nexustek.com.br" class="hover:text-white transition-colors">Contato@nexustek.com.br</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="instagram" class="w-5 h-5 text-brand-glow flex-shrink-0"></i>
+                            <a href="https://www.instagram.com/nexustek_eletronica?igsh=NGJqa2RnNTlkYTVm" target="_blank" class="hover:text-white transition-colors">@nexustek_eletronica</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-dark-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-xs text-center md:text-left">
+                    &copy; 2026 Nexustek Eletrônica. Todos os direitos reservados.<br>
+                    <span class="mt-1 inline-block">Site criado por <strong>Lattwide Design</strong> | Telefone: (11) 95283-7708</span>
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/nexustek_eletronica?igsh=NGJqa2RnNTlkYTVm" target="_blank" class="w-8 h-8 rounded-full bg-dark-surface border border-dark-border flex items-center justify-center text-slate-400 hover:text-white hover:border-brand-glow transition-colors" title="Instagram">
+                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://wa.me/5511982698184" target="_blank" class="w-8 h-8 rounded-full bg-dark-surface border border-dark-border flex items-center justify-center text-slate-400 hover:text-white hover:border-brand-glow transition-colors" title="WhatsApp">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Lucide Icons Initialize -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    
+    <!-- Custom logic -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
