@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artigos | NexusTek Eletrônica</title>
+    <meta name="description" content="Artigos sobre qualidade e processos na montagem de placas eletrônicas." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#00B4D8',
+                            DEFAULT: '#0050A0',
+                            dark: '#002B5E',
+                            glow: '#00E5FF'
+                        },
+                        dark: {
+                            bg: '#070B14',
+                            surface: '#0D1322',
+                            card: '#131C31',
+                            border: '#1E293B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body class="bg-dark-bg text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-brand-light selection:text-white">
+    <header class="fixed w-full top-0 z-50 bg-dark-bg/90 backdrop-blur-md border-b border-dark-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="./assets/images/logo.jpg" alt="Nexustek Eletrônica" class="h-16 w-auto" />
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Home</a>
+                    <a href="index.html#about" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Quem Somos</a>
+                    <a href="index.html#services" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Serviços</a>
+                    <a href="#artigo-principal" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Artigos</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-28 pb-16">
+        <section class="relative bg-dark-surface">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div class="bg-dark-card border border-dark-border rounded-3xl p-10 shadow-2xl">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-DEFAULT/10 text-brand-glow text-xs uppercase tracking-[0.3em] mb-6">Artigos NexusTek</span>
+                    <h1 id="artigo-principal" class="text-4xl md:text-5xl font-bold text-white mb-6">Como Garantir a Qualidade na Montagem de Placas Eletrônicas?</h1>
+                    <p class="text-slate-300 text-lg leading-relaxed mb-8">
+                        A qualidade de uma placa eletrônica não depende apenas dos componentes utilizados. Ela é resultado de um conjunto de processos controlados que envolvem engenharia, fabricação, inspeção e testes.
+                    </p>
+
+                    <div class="space-y-8">
+                        <section>
+                            <h2 class="text-2xl font-semibold text-white mb-4">Processos controlados para qualidade</h2>
+                            <p class="text-slate-300 leading-relaxed">
+                                Na manufatura eletrônica moderna, cada etapa do processo deve ser cuidadosamente monitorada para garantir que o produto final atenda aos requisitos de desempenho, confiabilidade e durabilidade.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3 class="text-xl font-semibold text-white mb-4">Fatores que influenciam diretamente a qualidade</h3>
+                            <div class="space-y-4 text-slate-300">
+                                <div>
+                                    <h4 class="font-semibold text-white">Controle de materiais</h4>
+                                    <p class="leading-relaxed">
+                                        A qualidade começa antes mesmo da produção. Componentes eletrônicos devem possuir procedência confiável, rastreabilidade e armazenamento adequado para evitar problemas como oxidação, absorção de umidade e obsolescência.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">Impressão de pasta de solda</h4>
+                                    <p class="leading-relaxed">
+                                        Mais de 60% dos defeitos encontrados em linhas SMT estão relacionados à deposição incorreta de pasta de solda. O controle de espessura, alinhamento do estêncil e parâmetros de impressão é fundamental.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">Posicionamento dos componentes</h4>
+                                    <p class="leading-relaxed">
+                                        Equipamentos Pick and Place modernos realizam milhares de montagens por hora com precisão micrométrica, garantindo o posicionamento correto dos componentes.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">Processo de refusão</h4>
+                                    <p class="leading-relaxed">
+                                        O perfil térmico do forno deve ser desenvolvido especificamente para cada produto, assegurando a fusão adequada da solda sem causar danos aos componentes.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">Inspeções e testes</h4>
+                                    <p class="leading-relaxed">
+                                        A utilização de AOI, SPI, ICT e testes funcionais reduz drasticamente a probabilidade de defeitos chegarem ao cliente final.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 class="text-xl font-semibold text-white mb-4">SMT e PTH: entenda as diferenças</h3>
+                            <p class="text-slate-300 leading-relaxed mb-4">
+                                A fabricação de placas eletrônicas utiliza principalmente dois métodos de montagem: SMT (Surface Mount Technology) e PTH (Pin Through Hole Technology). Embora ambas as tecnologias tenham o mesmo objetivo, cada uma possui características específicas que impactam diretamente no desempenho, custo e confiabilidade do produto.
+                            </p>
+
+                            <div class="grid gap-6 md:grid-cols-2">
+                                <div class="bg-dark-bg border border-dark-border rounded-2xl p-6">
+                                    <h4 class="text-white font-semibold mb-3">Tecnologia SMT</h4>
+                                    <p class="text-slate-300 leading-relaxed mb-3">
+                                        Os componentes são montados diretamente sobre a superfície da placa.
+                                    </p>
+                                    <ul class="list-disc list-inside text-slate-300 space-y-2">
+                                        <li>Alta produtividade</li>
+                                        <li>Menor custo de montagem</li>
+                                        <li>Equipamentos mais compactos</li>
+                                        <li>Maior densidade de componentes</li>
+                                        <li>Melhor repetibilidade do processo</li>
+                                        <li>Produção totalmente automatizada</li>
+                                    </ul>
+                                    <p class="text-slate-300 leading-relaxed mt-3">
+                                        Exemplos: computadores, equipamentos médicos, automação industrial, telecomunicações, IoT e automotivo.
+                                    </p>
+                                </div>
+
+                                <div class="bg-dark-bg border border-dark-border rounded-2xl p-6">
+                                    <h4 class="text-white font-semibold mb-3">Tecnologia PTH</h4>
+                                    <p class="text-slate-300 leading-relaxed mb-3">
+                                        Os terminais dos componentes atravessam a placa e são soldados no lado oposto.
+                                    </p>
+                                    <ul class="list-disc list-inside text-slate-300 space-y-2">
+                                        <li>Maior resistência mecânica</li>
+                                        <li>Excelente desempenho em altas correntes</li>
+                                        <li>Melhor fixação para componentes pesados</li>
+                                    </ul>
+                                    <p class="text-slate-300 leading-relaxed mt-3">
+                                        Aplicações comuns: transformadores, conectores, relés, bobinas e componentes de potência.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 class="text-xl font-semibold text-white mb-4">O que é AOI e como ela evita falhas em campo?</h3>
+                            <p class="text-slate-300 leading-relaxed mb-4">
+                                A AOI (Automatic Optical Inspection) é um dos recursos mais importantes para o controle de qualidade na manufatura eletrônica. Utilizando câmeras de alta resolução e algoritmos de visão computacional, o sistema compara automaticamente a placa produzida com um modelo de referência.
+                            </p>
+                            <div class="grid gap-4 md:grid-cols-2">
+                                <div class="bg-dark-bg border border-dark-border rounded-2xl p-6">
+                                    <h4 class="text-white font-semibold mb-3">O que a AOI detecta?</h4>
+                                    <ul class="list-disc list-inside text-slate-300 space-y-2">
+                                        <li>Componentes ausentes</li>
+                                        <li>Componentes invertidos</li>
+                                        <li>Deslocamento</li>
+                                        <li>Tombstoning</li>
+                                        <li>Excesso ou falta de solda</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-dark-bg border border-dark-border rounded-2xl p-6">
+                                    <h4 class="text-white font-semibold mb-3">Benefícios para o cliente</h4>
+                                    <ul class="list-disc list-inside text-slate-300 space-y-2">
+                                        <li>Redução de defeitos</li>
+                                        <li>Menor índice de retrabalho</li>
+                                        <li>Maior confiabilidade</li>
+                                        <li>Menor custo de garantia</li>
+                                        <li>Maior vida útil do produto</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 class="text-xl font-semibold text-white mb-4">Os 10 defeitos mais comuns em placas eletrônicas</h3>
+                            <ol class="list-decimal list-inside text-slate-300 space-y-4">
+                                <li>
+                                    <strong class="text-white">Ponte de solda:</strong> curto-circuito causado pela união indevida entre terminais. Possíveis causas: excesso de pasta, perfil térmico inadequado, problemas no estêncil.
+                                </li>
+                                <li>
+                                    <strong class="text-white">Falta de solda:</strong> conexão elétrica insuficiente devido à baixa quantidade de solda. Possíveis causas: entupimento do estêncil, impressão inadequada, oxidação.
+                                </li>
+                                <li>
+                                    <strong class="text-white">Tombstoning:</strong> componente levantado em uma das extremidades. Possíveis causas: desequilíbrio térmico, layout inadequado, deposição desigual de solda.
+                                </li>
+                                <li>
+                                    <strong class="text-white">Componente ausente:</strong> falha no processo de montagem automática.
+                                </li>
+                                <li>
+                                    <strong class="text-white">Polaridade invertida:</strong> erro de posicionamento que pode inutilizar o produto.
+                                </li>
+                                <li>
+                                    <strong class="text-white">Solda fria:</strong> junção sem fusão adequada da liga metálica.
+                                </li>
+                                <li>
+                                    <strong class="text-white">Componente desalinhado:</strong> posicionado fora da área prevista.
+                                </li>
+                                <li>
+                                    <strong class="text-white">Curto-circuito oculto:</strong> defeito difícil de detectar visualmente.
+                                </li>
+                                <li>
+                                    <strong class="text-white">Via danificada:</strong> compromete a conexão entre camadas da PCB.
+                                </li>
+                                <li>
+                                    <strong class="text-white">Falhas intermitentes:</strong> defeitos que aparecem apenas em determinadas condições operacionais.
+                                </li>
+                            </ol>
+                        </section>
+
+                        <section>
+                            <h3 class="text-xl font-semibold text-white mb-4">Rastreabilidade na indústria eletrônica</h3>
+                            <p class="text-slate-300 leading-relaxed mb-4">
+                                Imagine identificar um problema em um lote produzido há seis meses e descobrir exatamente qual operador realizou a montagem, qual máquina produziu a placa, qual lote de componentes foi utilizado, qual perfil térmico foi aplicado e quais testes foram executados.
+                            </p>
+                            <div class="grid gap-4 md:grid-cols-2">
+                                <div class="bg-dark-bg border border-dark-border rounded-2xl p-6">
+                                    <h4 class="text-white font-semibold mb-3">Benefícios</h4>
+                                    <ul class="list-disc list-inside text-slate-300 space-y-2">
+                                        <li>Controle total da produção</li>
+                                        <li>Investigação rápida de falhas</li>
+                                        <li>Atendimento a normas como IATF 16949, ISO 9001 e IPC</li>
+                                        <li>Redução de custos</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-dark-bg border border-dark-border rounded-2xl p-6">
+                                    <p class="text-slate-300 leading-relaxed">
+                                        Empresas que adotam rastreabilidade possuem maior controle operacional e melhor gestão da qualidade.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 class="text-xl font-semibold text-white mb-4">O que é Full Box Build?</h3>
+                            <p class="text-slate-300 leading-relaxed mb-4">
+                                Muitas empresas acreditam que a montagem eletrônica termina na placa PCB. Na prática, o produto final envolve diversas etapas adicionais.
+                            </p>
+                            <div class="bg-dark-bg border border-dark-border rounded-2xl p-6">
+                                <p class="text-slate-300 leading-relaxed">
+                                    O conceito Full Box Build consiste em entregar o equipamento completamente montado, testado e pronto para uso. O processo pode incluir montagem eletrônica SMT/PTH, cabos, chicotes, integração mecânica, gabinetes, dissipadores, displays, fontes, testes funcionais, segurança elétrica, comunicação, burn-in, finalização, etiquetagem, embalagem e documentação.
+                                </p>
+                                <p class="text-slate-300 leading-relaxed mt-4">
+                                    Benefícios: redução de fornecedores, menor custo logístico, melhor controle de qualidade, menor prazo de entrega e responsabilidade centralizada.
+                                </p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 class="text-xl font-semibold text-white mb-4">Como escolher uma empresa de montagem eletrônica</h3>
+                            <p class="text-slate-300 leading-relaxed mb-4">
+                                A escolha de um parceiro de manufatura pode determinar o sucesso ou fracasso de um projeto.
+                            </p>
+                            <ul class="list-disc list-inside text-slate-300 space-y-2">
+                                <li>Capacidade produtiva</li>
+                                <li>Linhas SMT e PTH</li>
+                                <li>Integração eletromecânica</li>
+                                <li>Controle de qualidade: SPI, AOI, testes funcionais</li>
+                                <li>Rastreabilidade</li>
+                                <li>Engenharia, DFM e NPI</li>
+                                <li>Gestão de materiais e obsolescência</li>
+                                <li>Atendimento, suporte técnico, agilidade e transparência</li>
+                            </ul>
+                        </section>
+
+                        <p class="text-slate-400 leading-relaxed">
+                            Uma empresa preparada agrega valor ao produto e reduz riscos em toda a cadeia produtiva.
+                        </p>
+
+                        <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-DEFAULT text-white font-semibold hover:bg-brand-light transition-all">
+                            Voltar para o site
+                            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons()</script>
+</body>
+</html>git add index.html artigos.html
