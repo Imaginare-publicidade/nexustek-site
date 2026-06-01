@@ -143,6 +143,39 @@ a[class*='bg-brand-DEFAULT']:hover {
     filter: brightness(1.05);
 }
 
+.operations-card-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.operations-card {
+    min-height: 240px;
+}
+
+.operations-sector-list {
+    display: grid;
+    gap: 0.85rem 1.25rem;
+}
+
+@media (min-width: 1024px) {
+    .operations-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .operations-card {
+        height: 240px;
+        padding: 1.5rem !important;
+    }
+
+    .operations-sector-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .operations-card .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 0.55rem;
+    }
+}
+
 /* Custom Scrollbar for a premium look */
 ::-webkit-scrollbar {
     width: 10px;
