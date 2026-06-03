@@ -115,14 +115,14 @@ body.bg-dark-bg {
 
 .site-logo {
     display: block;
-    width: 14rem;
+    width: 11rem;
     height: auto;
     max-width: none;
     object-fit: contain;
 }
 
 .footer-logo {
-    width: 12rem;
+    width: 10rem;
 }
 
 @media (min-width: 1280px) {
