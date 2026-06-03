@@ -329,9 +329,8 @@ body.modal-open {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.65rem;
     min-height: 3.35rem;
-    padding: 0.65rem 1.15rem 0.65rem 0.72rem;
+    padding: 0.9rem 1.35rem;
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 999px;
     background: linear-gradient(135deg, #0050A0 0%, #00B4D8 100%);
@@ -348,17 +347,6 @@ body.modal-open {
     transform: translateY(-2px);
     background: linear-gradient(135deg, #0064bc 0%, #00d4ff 100%);
     box-shadow: 0 22px 55px rgba(0, 80, 160, 0.42), 0 0 0 8px rgba(0, 229, 255, 0.1);
-}
-
-.whatsapp-float__icon {
-    width: 2.05rem;
-    height: 2.05rem;
-    flex: 0 0 auto;
-    display: block;
-    padding: 0.4rem;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.16);
-    box-sizing: border-box;
 }
 
 @media (min-width: 1024px) {
@@ -389,13 +377,8 @@ body.modal-open {
         right: 1rem;
         bottom: 1rem;
         min-height: 3.1rem;
-        padding: 0.58rem 0.95rem 0.58rem 0.62rem;
+        padding: 0.82rem 1.15rem;
         font-size: 0.92rem;
-    }
-
-    .whatsapp-float__icon {
-        width: 1.95rem;
-        height: 1.95rem;
     }
 }
 
