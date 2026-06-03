@@ -110,14 +110,25 @@ body.bg-dark-bg {
     display: flex;
     align-items: center;
     height: 4.5rem;
+    background: transparent !important;
 }
 
 .site-logo {
     display: block;
-    width: auto;
-    height: 3.25rem;
-    max-width: 14rem;
+    width: 14rem;
+    height: auto;
+    max-width: none;
     object-fit: contain;
+}
+
+.footer-logo {
+    width: 12rem;
+}
+
+@media (min-width: 1280px) {
+    .site-logo-wrap {
+        margin-left: 4rem;
+    }
 }
 
 .hero-overlay {
