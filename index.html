@@ -47,10 +47,10 @@
 
     <!-- Navbar -->
     <header class="fixed w-full top-0 z-50 bg-dark-bg/80 backdrop-blur-md border-b border-dark-border" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-24">
-                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <img src="./assets/images/logo.jpg" alt="Nexustek Eletrônica" class="h-20 w-auto" />
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="site-logo-wrap flex-shrink-0 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="./assets/images/logo.jpg" alt="Nexustek Eletrônica" class="site-logo" />
                 </div>
 
                 <nav class="hidden md:flex space-x-8 items-center">
@@ -58,6 +58,7 @@
                     <a href="#about" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Quem Somos</a>
                     <a href="#services" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Serviços</a>
                     <a href="#differentials" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Diferenciais</a>
+                    <a href="./artigos.html" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Ver Artigos</a>
 
                     <a href="https://wa.me/5511982698184" target="_blank" rel="noopener noreferrer"
                        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-DEFAULT hover:bg-brand-light text-white text-sm font-medium transition-all shadow-[0_0_20px_rgba(0,80,160,0.3)]">
@@ -80,14 +81,15 @@
                 <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-card">Quem Somos</a>
                 <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-card">Serviços</a>
                 <a href="#differentials" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-card">Diferenciais</a>
+                <a href="./artigos.html" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-card">Ver Artigos</a>
                 <a href="https://wa.me/5511982698184" target="_blank" class="block px-3 py-2 mt-4 text-center rounded-lg bg-brand-DEFAULT text-white font-medium">Fale Conosco</a>
             </div>
         </div>
     </header>
 
-    <main class="pt-28 flex flex-col gap-20">
+    <main class="pt-20 flex flex-col gap-20">
         <!-- Hero -->
-        <section id="home" class="relative min-h-[70vh] flex items-center overflow-hidden">
+        <section id="home" class="relative min-h-[64vh] flex items-center overflow-hidden">
             <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline poster="./assets/images/hero_bg.png">
                 <source src="./assets/videos/hero_bg.mp4" type="video/mp4" />
             </video>
@@ -108,22 +110,15 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://wa.me/5511982698184?text=Olá,%20gostaria%20de%20solicitar%20diagnóstico" target="_blank" class="px-8 py-4 rounded-lg bg-brand-DEFAULT hover:bg-brand-light text-white font-semibold text-lg transition-all flex items-center justify-center gap-2">
+                    <a href="https://wa.me/5511982698184?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento" target="_blank" class="px-8 py-4 rounded-lg bg-brand-DEFAULT hover:bg-brand-light text-white font-semibold text-lg transition-all flex items-center justify-center gap-2">
                         <i data-lucide="clipboard" class="w-5 h-5"></i>
-                        Solicitar Diagnóstico
+                        Solicite seu orçamento
                     </a>
 
                     <a href="#services"
                        class="px-8 py-4 rounded-lg bg-brand-DEFAULT hover:bg-brand-light text-white font-semibold text-lg transition-all flex items-center justify-center gap-2">
                         Conheça nossa operação
                         <i data-lucide="arrow-right" class="w-5 h-5 text-white"></i>
-                    </a>
-
-                    <a href="./artigos.html" target="_blank" rel="noopener noreferrer"
-                       class="px-8 py-4 rounded-lg text-white font-semibold text-lg transition-all flex items-center justify-center gap-2"
-                       style="background: transparent !important; color: #ffffff !important; border-color: transparent !important; box-shadow: none !important;">
-                        Ver Artigos
-                        <i data-lucide="book-open" class="w-5 h-5"></i>
                     </a>
                 </div>
             </div>
