@@ -42,6 +42,15 @@ body::before {
     overflow: hidden;
 }
 
+.hero-media,
+.hero-scrim {
+    max-width: 82rem;
+    left: 50% !important;
+    right: auto !important;
+    width: 100% !important;
+    transform: translateX(-50%);
+}
+
 #home::before {
     content: '';
     position: absolute;
