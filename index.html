@@ -41,7 +41,7 @@
         }
     </script>
 
-    <link rel="stylesheet" href="./assets/css/styles.css?v=20260603-logo-size" />
+    <link rel="stylesheet" href="./assets/css/styles.css?v=20260603-form" />
 </head>
 <body class="bg-dark-bg text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-brand-light selection:text-white">
 
@@ -60,11 +60,11 @@
                     <a href="#differentials" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Diferenciais</a>
                     <a href="./artigos.html" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-slate-300 hover:text-brand-glow transition-colors">Ver Artigos</a>
 
-                    <a href="https://wa.me/5511982698184" target="_blank" rel="noopener noreferrer"
+                    <button type="button" data-contact-open
                        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-DEFAULT hover:bg-brand-light text-white text-sm font-medium transition-all shadow-[0_0_20px_rgba(0,80,160,0.3)]">
                         <i data-lucide="message-square" class="w-4 h-4"></i>
                         Fale Conosco
-                    </a>
+                    </button>
                 </nav>
 
                 <div class="lg:hidden flex items-center">
@@ -82,7 +82,7 @@
                 <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-card">Serviços</a>
                 <a href="#differentials" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-card">Diferenciais</a>
                 <a href="./artigos.html" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-dark-card">Ver Artigos</a>
-                <a href="https://wa.me/5511982698184" target="_blank" class="block px-3 py-2 mt-4 text-center rounded-lg bg-brand-DEFAULT text-white font-medium">Fale Conosco</a>
+                <button type="button" data-contact-open class="block w-full px-3 py-2 mt-4 text-center rounded-lg bg-brand-DEFAULT text-white font-medium">Fale Conosco</button>
             </div>
         </div>
     </header>
@@ -110,10 +110,10 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://wa.me/5511982698184?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento" target="_blank" class="px-8 py-4 rounded-lg bg-brand-DEFAULT hover:bg-brand-light text-white font-semibold text-lg transition-all flex items-center justify-center gap-2">
+                    <button type="button" data-contact-open class="px-8 py-4 rounded-lg bg-brand-DEFAULT hover:bg-brand-light text-white font-semibold text-lg transition-all flex items-center justify-center gap-2">
                         <i data-lucide="clipboard" class="w-5 h-5"></i>
                         Solicite seu orçamento
-                    </a>
+                    </button>
 
                     <a href="#services"
                        class="px-8 py-4 rounded-lg bg-brand-DEFAULT hover:bg-brand-light text-white font-semibold text-lg transition-all flex items-center justify-center gap-2">
@@ -395,16 +395,72 @@
         </div>
     </footer>
 
+    <div id="contact-modal" class="contact-modal hidden" aria-hidden="true">
+        <div class="contact-modal__backdrop" data-contact-close></div>
+        <div class="contact-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+            <button type="button" class="contact-modal__close" data-contact-close aria-label="Fechar formulário">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <h2 id="contact-title" class="text-2xl font-bold text-white mb-2">Solicite seu orçamento</h2>
+            <p class="text-slate-400 text-sm mb-6">Preencha os dados abaixo para que a equipe da Nexustek entre em contato.</p>
+
+            <form action="https://formsubmit.co/Contato@nexustek.com.br" method="POST" class="contact-form">
+                <input type="hidden" name="_subject" value="Novo contato pelo site Nexustek" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://imaginare-publicidade.github.io/nexustek-site/?form=enviado" />
+
+                <label>
+                    <span>Nome</span>
+                    <input type="text" name="Nome" autocomplete="name" required />
+                </label>
+
+                <label>
+                    <span>Empresa</span>
+                    <input type="text" name="Empresa" autocomplete="organization" />
+                </label>
+
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="Email" autocomplete="email" required />
+                </label>
+
+                <label>
+                    <span>Telefone</span>
+                    <input type="tel" name="Telefone" autocomplete="tel" required />
+                </label>
+
+                <label>
+                    <span>Serviço de interesse</span>
+                    <select name="Serviço de interesse" required>
+                        <option value="">Selecione</option>
+                        <option>Montagem SMT/PTH</option>
+                        <option>Manufatura eletrônica (EMS)</option>
+                        <option>Retrabalho e reparo</option>
+                        <option>Engenharia de processos</option>
+                        <option>Testes funcionais e inspeção</option>
+                        <option>Outro</option>
+                    </select>
+                </label>
+
+                <label class="contact-form__full">
+                    <span>Mensagem</span>
+                    <textarea name="Mensagem" rows="5" required></textarea>
+                </label>
+
+                <button type="submit" class="contact-form__submit">
+                    <i data-lucide="send" class="w-5 h-5"></i>
+                    Enviar solicitação
+                </button>
+            </form>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>lucide.createIcons()</script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/main.js?v=20260603-form"></script>
 
-    <script>
-        // mobile menu toggle
-        document.getElementById('mobile-menu-btn')?.addEventListener('click', function () {
-            document.getElementById('mobile-menu')?.classList.toggle('hidden');
-        });
-    </script>
 </body>
 </html>

@@ -216,6 +216,111 @@ a[class*='bg-brand-DEFAULT']:hover {
     gap: 0.85rem 1.25rem;
 }
 
+.contact-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+
+.contact-modal.hidden {
+    display: none;
+}
+
+.contact-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 6, 14, 0.78);
+    backdrop-filter: blur(8px);
+}
+
+.contact-modal__dialog {
+    position: relative;
+    width: min(100%, 42rem);
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: rgba(8, 14, 30, 0.96);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+    padding: 1.5rem;
+}
+
+.contact-modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.contact-form label,
+.contact-form__full {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.contact-form__full {
+    grid-column: 1 / -1;
+}
+
+.contact-form span {
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 0.55rem;
+    background: rgba(5, 8, 20, 0.86);
+    color: #f8fafc;
+    padding: 0.8rem 0.9rem;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: rgba(0, 229, 255, 0.55);
+    box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.12);
+}
+
+.contact-form__submit {
+    grid-column: 1 / -1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.65rem;
+    background: #0050A0;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.9rem 1.1rem;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
 @media (min-width: 1024px) {
     .operations-card-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -232,6 +337,12 @@ a[class*='bg-brand-DEFAULT']:hover {
 
     .operations-card .space-y-3 > :not([hidden]) ~ :not([hidden]) {
         margin-top: 0.55rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-form {
+        grid-template-columns: 1fr;
     }
 }
 
