@@ -1,5 +1,7 @@
 :root {
     color-scheme: dark;
+    --site-max-width: 72rem;
+    --site-gutter: 1rem;
     --bg-primary: #050814;
     --bg-secondary: #0d1625;
     --bg-card: rgba(10, 18, 35, 0.95);
@@ -12,11 +14,13 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
     background-color: var(--bg-primary);
     background-image:
         linear-gradient(rgba(5, 8, 20, 0.78), rgba(5, 8, 20, 0.88)),
@@ -27,6 +31,11 @@ body {
     background-attachment: fixed, fixed, fixed, fixed, fixed;
     background-position: center, center, top left, 82% 18%, center;
     background-size: cover, cover, auto, auto, auto;
+}
+
+.site-container {
+    width: min(calc(100% - (var(--site-gutter) * 2)), var(--site-max-width));
+    margin-inline: auto;
 }
 
 body::before {
@@ -48,10 +57,10 @@ body::before {
 
 .hero-media,
 .hero-scrim {
-    max-width: 82rem;
+    max-width: var(--site-max-width);
     left: 50% !important;
     right: auto !important;
-    width: 100% !important;
+    width: min(calc(100% - (var(--site-gutter) * 2)), var(--site-max-width)) !important;
     transform: translateX(-50%);
 }
 
