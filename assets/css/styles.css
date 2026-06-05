@@ -270,7 +270,7 @@ a[class*='bg-brand-DEFAULT']:hover {
     line-height: 1.7;
 }
 
-.service-card__body button {
+.service-card__body a {
     display: inline-flex;
     width: fit-content;
     align-items: center;
@@ -280,7 +280,7 @@ a[class*='bg-brand-DEFAULT']:hover {
     font-weight: 700;
 }
 
-.service-card__body button:hover {
+.service-card__body a:hover {
     color: #fff;
 }
 
