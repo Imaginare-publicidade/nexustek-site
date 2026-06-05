@@ -1,7 +1,8 @@
 :root {
     color-scheme: dark;
-    --site-max-width: 72rem;
-    --site-gutter: 1rem;
+    --site-max-width: 1140px;
+    --site-gutter: clamp(1rem, 3vw, 1.5rem);
+    --site-shell-width: calc(var(--site-max-width) + (var(--site-gutter) * 2));
     --bg-primary: #050814;
     --bg-secondary: #0d1625;
     --bg-card: rgba(10, 18, 35, 0.95);
@@ -34,8 +35,11 @@ body {
 }
 
 .site-container {
-    width: min(calc(100% - (var(--site-gutter) * 2)), var(--site-max-width));
+    width: 100%;
+    max-width: var(--site-shell-width);
     margin-inline: auto;
+    padding-inline: var(--site-gutter);
+    box-sizing: border-box;
 }
 
 body::before {
@@ -53,14 +57,15 @@ body::before {
 #home {
     position: relative;
     overflow: hidden;
+    padding-block: 5rem;
 }
 
 .hero-media,
 .hero-scrim {
-    max-width: var(--site-max-width);
+    max-width: none;
     left: 50% !important;
     right: auto !important;
-    width: min(calc(100% - (var(--site-gutter) * 2)), var(--site-max-width)) !important;
+    width: min(100%, var(--site-shell-width)) !important;
     transform: translateX(-50%);
 }
 
@@ -123,12 +128,6 @@ body.bg-dark-bg {
 
 .footer-logo {
     width: 10rem;
-}
-
-@media (min-width: 1280px) {
-    .site-logo-wrap {
-        margin-left: 4rem;
-    }
 }
 
 .hero-overlay {
@@ -323,7 +322,7 @@ body.modal-open {
 
 .whatsapp-float {
     position: fixed;
-    right: max(1rem, calc((100vw - var(--site-max-width)) / 2 + 1rem));
+    right: max(1rem, calc((100vw - var(--site-shell-width)) / 2 + var(--site-gutter)));
     bottom: 1.25rem;
     z-index: 90;
     display: inline-flex;
