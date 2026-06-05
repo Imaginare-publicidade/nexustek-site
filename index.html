@@ -41,7 +41,7 @@
         }
     </script>
 
-    <link rel="stylesheet" href="./assets/css/styles.css?v=20260605-hero-full" />
+    <link rel="stylesheet" href="./assets/css/styles.css?v=20260605-services-cards" />
 </head>
 <body class="bg-dark-bg text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-brand-light selection:text-white">
 
@@ -241,6 +241,60 @@
                     if (buttons[0]) buttons[0].click();
                 })();
             </script>
+        </section>
+
+        <section id="services" class="py-24 bg-dark-bg border-b border-dark-border">
+            <div class="site-container space-y-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-brand-glow font-semibold tracking-wide uppercase text-sm mb-2">Serviços</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Soluções para montagem eletrônica</h3>
+                    <p class="text-slate-400 text-lg">Operação técnica para transformar placas, subconjuntos e produtos completos com previsibilidade, escala e qualidade industrial.</p>
+                </div>
+
+                <div class="service-card-grid">
+                    <article class="service-card">
+                        <div class="service-card__media">
+                            <img src="./assets/images/service_smd_pth.jpeg" alt="Placa eletrônica com componentes SMD e PTH" loading="lazy" />
+                            <div class="service-card__icon">
+                                <i data-lucide="cpu" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                        <div class="service-card__body">
+                            <h4>Montagem SMD, THT e Mista</h4>
+                            <p>Montagem técnica com controle de processo para entregar placas eletrônicas com precisão, previsibilidade e grande capacidade de escala.</p>
+                            <button type="button" data-contact-open>Solicitar cotação <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__media">
+                            <img src="./assets/images/service_full_box_turnkey.jpeg" alt="Processo Full Box Build e Turn-Key em montagem eletrônica" loading="lazy" />
+                            <div class="service-card__icon">
+                                <i data-lucide="layers" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                        <div class="service-card__body">
+                            <h4>Full Box Build / Turn-Key</h4>
+                            <p>Entrega de sistema completo, desde componentes eletrônicos até integração mecânica, montagem de gabinetes, chicotes e embalagem final.</p>
+                            <button type="button" data-contact-open>Solicitar cotação <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__media">
+                            <img src="./assets/images/service_tests_inspection.jpeg" alt="Testes e inspeção eletrônica em placas e equipamentos" loading="lazy" />
+                            <div class="service-card__icon">
+                                <i data-lucide="scan" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                        <div class="service-card__body">
+                            <h4>Testes e Inspeção</h4>
+                            <p>Processos rigorosos de verificação funcional e inspeção para eliminar falhas invisíveis e assegurar durabilidade do produto.</p>
+                            <button type="button" data-contact-open>Solicitar cotação <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <section id="operations" class="py-24 bg-dark-bg border-b border-dark-border">
