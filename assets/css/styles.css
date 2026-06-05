@@ -63,10 +63,10 @@ body::before {
 .hero-media,
 .hero-scrim {
     max-width: none;
-    left: 50% !important;
-    right: auto !important;
-    width: min(calc(100% - (var(--site-gutter) * 2)), var(--site-max-width)) !important;
-    transform: translateX(-50%);
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    transform: none;
 }
 
 #home::before {
