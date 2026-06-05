@@ -1,6 +1,6 @@
 :root {
     color-scheme: dark;
-    --site-max-width: 1140px;
+    --site-max-width: 1320px;
     --site-gutter: clamp(1rem, 3vw, 1.5rem);
     --site-shell-width: calc(var(--site-max-width) + (var(--site-gutter) * 2));
     --bg-primary: #050814;
@@ -65,7 +65,7 @@ body::before {
     max-width: none;
     left: 50% !important;
     right: auto !important;
-    width: min(100%, var(--site-shell-width)) !important;
+    width: min(calc(100% - (var(--site-gutter) * 2)), var(--site-max-width)) !important;
     transform: translateX(-50%);
 }
 
