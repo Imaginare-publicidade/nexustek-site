@@ -201,6 +201,76 @@ a[class*='bg-brand-DEFAULT']:hover {
     filter: brightness(1.05);
 }
 
+.top-stats {
+    position: relative;
+    overflow: hidden;
+    padding-block: 3.5rem;
+    border-block: 1px solid var(--border);
+    background-image:
+        linear-gradient(rgba(5, 8, 20, 0.66), rgba(5, 8, 20, 0.82)),
+        url('../images/hero_bg.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.top-stats::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 45%, rgba(0, 212, 255, 0.2), transparent 24%),
+        radial-gradient(circle at 78% 68%, rgba(0, 200, 140, 0.16), transparent 22%);
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+.top-stats-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.top-stat-card {
+    display: flex;
+    min-height: 13.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 229, 255, 0.12);
+    border-radius: 1.25rem;
+    background: rgba(5, 13, 24, 0.82);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    padding: 2rem;
+    text-align: center;
+}
+
+.top-stat-card strong {
+    color: transparent;
+    background: linear-gradient(135deg, #4da3ff 0%, #00e5ff 78%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: clamp(4rem, 7vw, 5.75rem);
+    font-weight: 800;
+    line-height: 0.95;
+}
+
+.top-stat-card span {
+    margin-top: 1rem;
+    color: #f8fafc;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.top-stat-card p {
+    max-width: 15rem;
+    margin-top: 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.45;
+}
+
 .service-card-grid {
     display: grid;
     gap: 1.5rem;
@@ -451,6 +521,15 @@ body.modal-open {
 }
 
 @media (max-width: 1023px) {
+    .top-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .top-stat-card {
+        min-height: 11rem;
+    }
+
     .service-card-grid {
         grid-template-columns: 1fr;
     }
@@ -462,6 +541,14 @@ body.modal-open {
 }
 
 @media (max-width: 640px) {
+    .top-stats {
+        padding-block: 2.25rem;
+    }
+
+    .top-stat-card {
+        padding: 1.5rem;
+    }
+
     .service-card__body {
         padding: 1.8rem 1.25rem 1.4rem;
     }
